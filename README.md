@@ -40,6 +40,17 @@ curl -X POST https://conformi.eu/api/mcp \
   -d '{"jsonrpc":"2.0","id":1,"method":"tools/call","params":{"name":"get_knowledge_article","arguments":{"celex":"32024R1689"}}}'
 ```
 
+## Troubleshooting
+
+| Symptom | Cause & fix |
+|---|---|
+| `search_eu_law` returns `isError` with a purchase hint | No `Authorization: Bearer` key was sent. Free tools work without a key; search is metered — get a key via https://conformi.eu/api/v1/openapi.json |
+| `401 UNAUTHORIZED` on search | Key invalid or revoked. Check the key in your conformi.eu account (Account → API Keys) |
+| `403 PLAN_REQUIRED` / `TRIAL_LIMIT_REACHED` | Subscription inactive or the 50-query trial allowance is used up — activate the subscription |
+| `404` for a CELEX in `get_knowledge_article` | No curated report exists for that act yet. Try `search_eu_law` instead — the full corpus is searchable |
+| Connection fails | The server speaks Streamable HTTP only (no SSE). POST JSON-RPC to https://conformi.eu/api/mcp; GET returns 405 by design |
+| Anything else | Open an issue: https://github.com/conformi-eu/conformi-search-mcp/issues or mail info@conformi.eu |
+
 ## License
 
 This repository documents the public endpoint. The hosted service, its source code
