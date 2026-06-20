@@ -9,5 +9,10 @@
       "type": "streamable-http",
       "url": "https://conformi.eu/api/mcp"
     }
-  ]
+  ],
+  "repository": {
+    "url": "https://github.com/conformi-eu/conformi-search-mcp",
+    "source": "github",
+    "id": "1265586466"
+  }
 }
