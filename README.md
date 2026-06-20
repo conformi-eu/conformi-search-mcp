@@ -1,5 +1,7 @@
 # conformi-search — EU Legal Research MCP Server
 
+[![smithery badge](https://smithery.ai/badge/conformi-eu/conformi-search)](https://smithery.ai/server/conformi-eu/conformi-search)
+
 MCP server for EU legal research with verifiable CELEX citations from the
 EUR-Lex corpus (German, English, French — each a native-language index, not translations).
 It provides public access to selected EU legal research tools and can optionally use a
