@@ -1,0 +1,38 @@
+{
+  "name": "conformi-search-mcp",
+  "version": "1.0.0",
+  "description": "MCP server for EU legal research with verifiable CELEX citations (EUR-Lex corpus, DE/EN/FR).",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "conformi-search-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.6.0",
+    "@types/node": "^22.0.0"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "eu-law",
+    "eur-lex",
+    "celex",
+    "legal-research",
+    "gdpr",
+    "ai-act"
+  ],
+  "homepage": "https://conformi.eu"
+}

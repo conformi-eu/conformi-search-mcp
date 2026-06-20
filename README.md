@@ -1,14 +1,49 @@
 # conformi-search — EU Legal Research MCP Server
 
-**Remote MCP server** for EU legal research with verifiable CELEX citations from the
+MCP server for EU legal research with verifiable CELEX citations from the
 EUR-Lex corpus (German, English, French — each a native-language index, not translations).
+It provides public access to selected EU legal research tools and can optionally use a
+conformi API key for extended semantic search.
 
 > Research tool with primary-source citations — **not legal advice**, no attorney-client relationship.
 
-## Endpoint
+## Two ways to use it
+
+**1. Run it locally (stdio)** — installable MCP server, no key needed for the free tools:
+
+```bash
+npm install && npm run build
+node dist/index.js
+```
+
+Or with Docker:
+
+```bash
+docker build -t conformi-search-mcp .
+docker run -i conformi-search-mcp
+```
+
+Add to an MCP client (e.g. Claude Desktop) config:
+
+```json
+{
+  "mcpServers": {
+    "conformi-search": {
+      "command": "node",
+      "args": ["/path/to/conformi-search-mcp/dist/index.js"],
+      "env": { "CONFORMI_API_KEY": "cfm_live_…  (optional, enables search_eu_law)" }
+    }
+  }
+}
+```
+
+Without `CONFORMI_API_KEY` the two free tools are available. Setting the key adds the
+metered `search_eu_law` tool.
+
+**2. Use the hosted remote endpoint** directly (Streamable HTTP, stateless):
 
 ```
-https://conformi.eu/api/mcp        (Streamable HTTP, stateless)
+https://conformi.eu/api/mcp
 ```
 
 Registered in the official MCP Registry as **`eu.conformi/conformi-search`**.
