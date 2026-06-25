@@ -1,13 +1,37 @@
+<div align="center">
+
+<img src="conformi-logo.svg" alt="conformi" width="120" />
+
 # conformi-search — EU Legal Research MCP Server
 
-[![smithery badge](https://smithery.ai/badge/conformi-eu/conformi-search)](https://smithery.ai/server/conformi-eu/conformi-search)
+**Verifiable EU law for AI agents — every answer carries a CELEX number and an EUR-Lex deep link.**
 
-MCP server for EU legal research with verifiable CELEX citations from the
-EUR-Lex corpus (German, English, French — each a native-language index, not translations).
-It provides public access to selected EU legal research tools and can optionally use a
+**Language:** [**English**](README.md) · [Deutsch](docs/de-DE/README.md) · [Français](docs/fr-FR/README.md)
+
+[![smithery badge](https://smithery.ai/badge/conformi-eu/conformi-search)](https://smithery.ai/server/conformi-eu/conformi-search)
+[![Smithery calls](https://smithery.ai/badge/conformi-eu/conformi-search/calls)](https://smithery.ai/server/conformi-eu/conformi-search)
+[![MCP Registry](https://img.shields.io/badge/MCP%20Registry-eu.conformi%2Fconformi--search-blue)](https://conformi.eu/api/mcp)
+[![Wikidata](https://img.shields.io/badge/Wikidata-Q140166658-006699)](https://www.wikidata.org/wiki/Q140166658)
+[![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+![Corpus](https://img.shields.io/badge/corpus-DE%20%C2%B7%20EN%20%C2%B7%20FR-orange)
+
+</div>
+
+---
+
+MCP server for **EU legal research with verifiable CELEX citations** from the EUR-Lex corpus
+(German, English, French — each a **native-language index, not machine translations**).
+It exposes selected EU legal research tools to any MCP client and can optionally use a
 conformi API key for extended semantic search.
 
 > Research tool with primary-source citations — **not legal advice**, no attorney-client relationship.
+
+## Why this exists
+
+LLMs answer EU-law questions plausibly but unverifiably. conformi-search returns answers that are
+**checkable against the primary source**: each result carries the CELEX number and a direct EUR-Lex
+link, so an agent (or a human) can verify the citation instead of trusting a hallucination.
+Works in Claude Code, Claude Desktop, Cursor, and any other MCP-capable harness.
 
 ## Two ways to use it
 
