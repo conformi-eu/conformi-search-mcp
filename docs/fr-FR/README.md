@@ -9,7 +9,6 @@
 **Langue :** [English](../../README.md) · [Deutsch](../de-DE/README.md) · [**Français**](README.md)
 
 [![smithery badge](https://smithery.ai/badge/conformi-eu/conformi-search)](https://smithery.ai/server/conformi-eu/conformi-search)
-[![Smithery calls](https://smithery.ai/badge/conformi-eu/conformi-search/calls)](https://smithery.ai/server/conformi-eu/conformi-search)
 [![MCP Registry](https://img.shields.io/badge/MCP%20Registry-eu.conformi%2Fconformi--search-blue)](https://conformi.eu/api/mcp)
 [![Wikidata](https://img.shields.io/badge/Wikidata-Q140166658-006699)](https://www.wikidata.org/wiki/Q140166658)
 [![License: MIT](https://img.shields.io/badge/license-MIT-green.svg)](../../LICENSE)
